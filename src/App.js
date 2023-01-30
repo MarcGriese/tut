@@ -1,21 +1,27 @@
 import React from 'react'
-import {Component} from 'react'
-//import Settings from './Settings'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import EnergyCostsPlantGermany from './EnergyCostsPlantGermany'
+import EnergyCostsPlantHungary from './EnergyCostsPlantHungary'
 import EnergyConsumptionPlantGermany from './EnergyConsumptionPlantGermany'
-//import EnergyConsumptionPlantHungary from './EnergyConsumptionPlantHungary'
-//import Chart from './testChart'
+import EnergyConsumptionPlantHungary from './EnergyConsumptionPlantHungary'
 
 
-class App extends Component {
-    render() {
-      return (
-        <div className="container">
-          <EnergyConsumptionPlantGermany/>
-        </div>
-      )
-    }
-  }
+export default function App() {
+    return(
+        <BrowserRouter>
+        <Routes>
+            <Route path='/'>
+                <Route path='energyconsumption'>
+                    <Route path='germany' element={<EnergyConsumptionPlantGermany/>}/>
+                    <Route path='hungary' element={<EnergyConsumptionPlantHungary/>}/>
+                </Route>
 
-
-
-  export default App
+                <Route path='energycosts'>
+                    <Route path='germany' element={<EnergyCostsPlantGermany/>}/>
+                    <Route path='hungary' element={<EnergyCostsPlantHungary/>}/>
+                </Route>
+            </Route>
+        </Routes>
+        </BrowserRouter>
+    );
+}

@@ -7,6 +7,7 @@ import carbonFootprintIcon from '../assets/carbon-footprint-icon-1.svg'
 import ProductionBigIcon from '../assets/subtract-1.svg'
 import iconSettings2 from '../assets/icon-1.svg'
 import ProductionSmallIcon from '../assets/subtract-2.svg'
+import {Link} from 'react-router-dom'
                         
                     
 
@@ -14,7 +15,10 @@ function Sidebar() {
     return(
         <div className="sidebar-menu">
             <img className="dashboard-icon" src={dashboardIcon} alt="dashboard icon" />
-            <img className="sidebar-menu-item" src={energyCostsIcon} alt="energy costs icon" />
+                <Link to='/energycosts/hungary'>
+                    <img className="sidebar-menu-item" src={energyCostsIcon} alt="energy costs icon" />
+                </Link>
+
             <div className="overlap-group1">
                 <img className="icon-settings1" src={energyConsumptionIcon} alt="energy consumption icon" />
             </div>
