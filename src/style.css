@@ -1,0 +1,89 @@
+/* Variables */
+
+:root {
+    --black-2: rgba(0,0,0,0.251);
+    --black: rgba(0,0,0,1);
+    --green-haze: rgba(0,158,77,1);
+    --shark: rgba(41,41,41,1);
+    --cape-cod: rgba(66,66,66,1);
+    --cape-cod-2: rgba(66,69,68,1);
+    --vida-loca: rgba(84,142,54,1);
+    --sea-green: rgba(161,216,188,1);
+    --flush-mahogany: rgba(201,55,35,1);
+    --white: rgba(255,255,255,1);
+
+    --font-size-xs: 12px;
+    --font-size-s: 14px;
+    --font-size-m: 16px;
+    --font-size-l: 25px;
+    --font-size-xl: 40px;
+
+    --font-family-aileron-bold: "Aileron-Bold";
+    --font-family-aileron-regular: "Aileron-Regular";
+}
+
+/* Classes */
+
+.aileron-bold-white-14px {
+    color: var(--white);
+    font-family: var(--font-family-aileron-bold);
+    font-size: var(--font-size-s);
+    font-weight: 700;
+    font-style: normal;
+}
+
+.aileron-bold-green-haze-14px {
+    color: var(--green-haze);
+    font-family: var(--font-family-aileron-bold);
+    font-size: var(--font-size-s);
+    font-weight: 700;
+    font-style: normal;
+}
+
+.aileron-bold-flush-mahogany-14px {
+    color: var(--flush-mahogany);
+    font-family: var(--font-family-aileron-bold);
+    font-size: var(--font-size-s);
+    font-weight: 700;
+    font-style: normal;
+}
+
+.aileron-bold-white-12px {
+    color: var(--white);
+    font-family: var(--font-family-aileron-bold);
+    font-size: var(--font-size-xs);
+    font-weight: 700;
+    font-style: normal;
+}
+
+.aileron-bold-white-40px {
+    color: var(--white);
+    font-family: var(--font-family-aileron-bold);
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    font-style: normal;
+}
+
+.aileron-bold-white-16px {
+    color: var(--white);
+    font-family: var(--font-family-aileron-bold);
+    font-size: var(--font-size-m);
+    font-weight: 700;
+    font-style: normal;
+}
+
+.aileron-regular-normal-white-16px {
+    color: var(--white);
+    font-family: var(--font-family-aileron-regular);
+    font-size: var(--font-size-m);
+    font-weight: 400;
+    font-style: normal;
+}
+
+.aileron-bold-white-25px {
+    color: var(--white);
+    font-family: var(--font-family-aileron-bold);
+    font-size: var(--font-size-l);
+    font-weight: 700;
+    font-style: normal;
+}
