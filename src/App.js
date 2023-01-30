@@ -4,6 +4,7 @@ import EnergyCostsPlantGermany from './EnergyCostsPlantGermany'
 import EnergyCostsPlantHungary from './EnergyCostsPlantHungary'
 import EnergyConsumptionPlantGermany from './EnergyConsumptionPlantGermany'
 import EnergyConsumptionPlantHungary from './EnergyConsumptionPlantHungary'
+import EnergyCostsDashboard from './EnergyCostsDashboard'
 
 
 export default function App() {
@@ -11,6 +12,7 @@ export default function App() {
         <BrowserRouter>
         <Routes>
             <Route path='/'>
+                <Route path='test' element={<EnergyCostsDashboard/>}/>
                 <Route path='energyconsumption'>
                     <Route path='germany' element={<EnergyConsumptionPlantGermany/>}/>
                     <Route path='hungary' element={<EnergyConsumptionPlantHungary/>}/>

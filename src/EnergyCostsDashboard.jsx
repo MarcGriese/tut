@@ -1,75 +1,69 @@
 import React from "react";
-import './global.css'
-import dashboardIcon from './assets/dashboard-icon-2.svg'
-import energyCostsIcon from './assets/energy-costs-icon-1.svg'
-import energyConsumptionIcon from './assets/energy-consumption-icon-1.svg'
-import carbonFootprintIcon from './assets/carbon-footprint-icon-1.svg'
-import ProductionBigIcon from './assets/subtract-1.svg'
-import iconSettings2 from './assets/icon-1.svg'
+import Sidebar from './Sidebars/SidebarEnergyCosts'
 import menuIconTopRight from './assets/menu-icon-top-right-1.svg'
-import iconSettings3 from './assets/schneider-electric-logo.svg'
+import schneiderElectricLogo from './assets/schneider-electric-logo.svg'
+import icon from './assets/energy-costs-icon-1.svg'
 import arrowLeftIcon from './assets/arrow-left.svg'
 import arrowRightIcon from './assets/arrow-right.svg'
-import ProductionSmallIcon from './assets/subtract-2.svg'
-import Chart from './testChart'
-
+import bubble from './assets/bubble.svg'
 
 function EnergyCostsDashboard() {
-
-    return (
+    return(
         <div className="container-center-horizontal">
-            <div className="settings screen">
-                
-                <div className="overlap-group2">
+            <div className="energy-costs screen">
+                <div className="overlap-group3">
                     <div className="background"></div>
                     <div className="fullscreen">
-                        
-                        <div className="sidebar-menu">
-                            <img className="dashboard-icon" src={dashboardIcon} alt="dashboard icon" />
-                            <div className="overlap-group1">
-                                <img className="icon-settings1" src={energyCostsIcon} alt="energy costs icon" />
-                            </div>
-                            <img className="sidebar-menu-item" src={energyConsumptionIcon} alt="energy consumption icon" />
-                            <img className="sidebar-menu-item" src={carbonFootprintIcon} alt="carbon footprint icon" />
-                            <div className="settings-container">
-                                <img className="icon-settings" src={ProductionBigIcon} alt="icon-settings" />
-                                <SettingsIcon />
-                            </div>
-                                <img className="sidebar-menu-item" src={iconSettings2} alt="icon-settings" />
-                        </div>
-
-                        <div className="total-energy-consumption-interior">
+                        <Sidebar />
+                        <div className="panels">
+                        <div className="flex-row">
+                                <div className="total-energy-costs">
                                     <div className="flex-row-1">
-                                        <header className="header">
-                                            <div className="title aileron-regular-normal-white-16px">
-                                                <span className="aileron-regular-normal-white-16px">THIS HOUR'S ENERGY CONSUMPTION:</span>
-                                            </div>
-                                            <h1 className="value aileron-bold-green-haze-40px">
-                                                <span className="aileron-bold-green-haze-40px">value</span>
-                                            </h1>
-                                        </header>
-                                        <div className="time">
-                                            <div className="hourly aileron-bold-white-16px">
-                                                <span className="aileron-bold-white-16px">hourly</span>
-                                            </div>
-                                            <div className="daily aileron-regular-normal-white-16px">
-                                                <span className="aileron-regular-normal-white-16px">daily</span>
-                                            </div>
-                                            <div className="weekly aileron-regular-normal-white-16px">
-                                                <span className="aileron-regular-normal-white-16px">weekly</span>
-                                            </div>
+                                        <div className="header aileron-regular-normal-white-16px">
+                                            <span className="aileron-regular-normal-white-16px">kekw</span>
                                         </div>
+                                        <img className="icon" src={icon} alt="icon" />
                                     </div>
-                                    <div className="graph">
-                                        <Chart />
+                                    <h1 className="value aileron-bold-white-40px">
+                                        <span className="aileron-bold-white-40px">kekw1</span>
+                                    </h1>
+                                    <Bubble />
+                                    <div className="overlap-group-1">
+                                        <div className="bar"></div>
+                                    </div>
+                                    <div className="total-budget aileron-bold-white-16px">
+                                        <span className="aileron-bold-white-16px">kekw2</span>
                                     </div>
                                 </div>
-
+                                <div className="plant">
+                                    <div className="plant-1 aileron-regular-normal-white-16px">
+                                        <span className="aileron-regular-normal-white-16px">PLANT HUNGARY</span>
+                                    </div>
+                                </div>
+                                <div className="plant">
+                                    <div className="plant-1 aileron-regular-normal-white-16px">
+                                        <span className="aileron-regular-normal-white-16px">PLANT GERMANY</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="flex-row-2">
+                                <div className="flex-row-item">
+                                    <div className="m314-spritzmaschine aileron-regular-normal-white-16px">
+                                        <span className="aileron-regular-normal-white-16px">spanText4</span>
+                                    </div>
+                                </div>
+                                <div className="flex-row-item">
+                                    <div className="m486-assemblage aileron-regular-normal-white-16px">
+                                        <span className="aileron-regular-normal-white-16px">spanText5</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <img className="menu-icon-top-right" src={menuIconTopRight} alt="menu icon top right" />
                     </div>
-                    <img className="schneider-electric-logo" src={iconSettings3} alt="Schneider Electric Logo" />
+                    <img className="schneider-electric-logo" src={schneiderElectricLogo} alt="Schneider Electric Logo" />
                     <div className="page-title aileron-bold-white-25px">
-                        <span className="aileron-bold-white-25px">ENERGY</span>
+                        <span className="aileron-bold-white-25px">ENERGY COSTS</span>
                     </div>
                     <DaySelection />
                 </div>
@@ -78,10 +72,14 @@ function EnergyCostsDashboard() {
     );
 }
 
-function SettingsIcon() {
+export default EnergyCostsDashboard
+
+function Bubble() {
     return(
-        <div className="settings-icon">
-            <img className="icon-settings-2" src={ProductionSmallIcon} alt="icon-settings" />
+        <div className="bubble" style={bubble}>
+            <div className="percent aileron-bold-white-14px">
+                <span className="aileron-bold-white-14px">77%</span>
+            </div>
         </div>
     );
 }
@@ -97,5 +95,3 @@ function DaySelection() {
         </div>
     );
 }
-
-export default EnergyCostsDashboard;
