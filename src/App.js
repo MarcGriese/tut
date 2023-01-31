@@ -19,6 +19,7 @@ export default function App() {
                 </Route>
 
                 <Route path='energycosts'>
+                    <Route path='dashboard' element={<EnergyCostsDashboard/>}/>
                     <Route path='germany' element={<EnergyCostsPlantGermany/>}/>
                     <Route path='hungary' element={<EnergyCostsPlantHungary/>}/>
                 </Route>

@@ -6,6 +6,8 @@ import icon from './assets/energy-costs-icon-1.svg'
 import arrowLeftIcon from './assets/arrow-left.svg'
 import arrowRightIcon from './assets/arrow-right.svg'
 import bubble from './assets/bubble.svg'
+import './energyCostsDashboard.css'
+import {Link} from 'react-router-dom'
 
 function EnergyCostsDashboard() {
     return(
@@ -16,49 +18,55 @@ function EnergyCostsDashboard() {
                     <div className="fullscreen">
                         <Sidebar />
                         <div className="panels">
-                        <div className="flex-row">
+                            <div className="flex-row">
                                 <div className="total-energy-costs">
                                     <div className="flex-row-1">
                                         <div className="header aileron-regular-normal-white-16px">
-                                            <span className="aileron-regular-normal-white-16px">kekw</span>
+                                            <span className="aileron-regular-normal-white-16px">TOTAL ENERGY COSTS</span>
                                         </div>
                                         <img className="icon" src={icon} alt="icon" />
                                     </div>
-                                    <h1 className="value aileron-bold-white-40px">
-                                        <span className="aileron-bold-white-40px">kekw1</span>
+                                    <h1 className="value aileron-bold-green-haze-40px">
+                                        <span className="aileron-bold-green-haze-40px">35.000€</span>
                                     </h1>
                                     <Bubble />
                                     <div className="overlap-group-1">
                                         <div className="bar"></div>
                                     </div>
                                     <div className="total-budget aileron-bold-white-16px">
-                                        <span className="aileron-bold-white-16px">kekw2</span>
+                                        <span className="aileron-bold-white-16px">Total Budget</span>
                                     </div>
-                                </div>
-                                <div className="plant">
-                                    <div className="plant-1 aileron-regular-normal-white-16px">
-                                        <span className="aileron-regular-normal-white-16px">PLANT HUNGARY</span>
                                     </div>
+
+                                    <Link to='/energycosts/hungary'>
+                                        <div className="plant-2">
+                                            <div className="plant-1 aileron-regular-normal-white-16px">
+                                                <span className="aileron-regular-normal-white-16px">PLANT HUNGARY</span>
+                                            </div>
+                                        </div>
+                                    </Link>
+
+                                    <Link to='/energycosts/germany'>
+                                        <div className="plant-2">
+                                            <div className="plant-1 aileron-regular-normal-white-16px">
+                                                <span className="aileron-regular-normal-white-16px">PLANT GERMANY</span>
+                                            </div>
+                                        </div>
+                                    </Link>
                                 </div>
-                                <div className="plant">
-                                    <div className="plant-1 aileron-regular-normal-white-16px">
-                                        <span className="aileron-regular-normal-white-16px">PLANT GERMANY</span>
+                                <div className="flex-row-2">
+                                    <div className="flex-row-item">
+                                        <div className="m314-spritzmaschine aileron-regular-normal-white-16px">
+                                            <span className="aileron-regular-normal-white-16px">M314 SPRITZMASCHINE</span>
+                                        </div>
+                                    </div>
+                                    <div className="flex-row-item">
+                                        <div className="m486-assemblage aileron-regular-normal-white-16px">
+                                            <span className="aileron-regular-normal-white-16px">M486 ASSEMBLAGE</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div className="flex-row-2">
-                                <div className="flex-row-item">
-                                    <div className="m314-spritzmaschine aileron-regular-normal-white-16px">
-                                        <span className="aileron-regular-normal-white-16px">spanText4</span>
-                                    </div>
-                                </div>
-                                <div className="flex-row-item">
-                                    <div className="m486-assemblage aileron-regular-normal-white-16px">
-                                        <span className="aileron-regular-normal-white-16px">spanText5</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                         <img className="menu-icon-top-right" src={menuIconTopRight} alt="menu icon top right" />
                     </div>
                     <img className="schneider-electric-logo" src={schneiderElectricLogo} alt="Schneider Electric Logo" />
@@ -76,7 +84,8 @@ export default EnergyCostsDashboard
 
 function Bubble() {
     return(
-        <div className="bubble" style={bubble}>
+        <div className="bubble" >
+            <img className="" src={bubble} alt="bubble" />
             <div className="percent aileron-bold-white-14px">
                 <span className="aileron-bold-white-14px">77%</span>
             </div>

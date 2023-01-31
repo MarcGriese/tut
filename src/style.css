@@ -64,6 +64,14 @@
     font-style: normal;
 }
 
+.aileron-bold-green-haze-40px {
+    color: var(--green-haze);
+    font-family: var(--font-family-aileron-bold);
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    font-style: normal;
+}
+
 .aileron-bold-white-16px {
     color: var(--white);
     font-family: var(--font-family-aileron-bold);
