@@ -7,23 +7,41 @@ import carbonFootprintIcon from '../assets/carbon-footprint-icon-1.svg'
 import ProductionBigIcon from '../assets/subtract-1.svg'
 import iconSettings2 from '../assets/icon-1.svg'
 import ProductionSmallIcon from '../assets/subtract-2.svg'
+import { Link } from "react-router-dom";
                         
                     
 
 function Sidebar() {
     return(
         <div className="sidebar-menu">
-            <img className="dashboard-icon" src={dashboardIcon} alt="dashboard icon" />
-            <img className="sidebar-menu-item" src={energyCostsIcon} alt="energy costs icon" />
-            <img className="sidebar-menu-item" src={energyConsumptionIcon} alt="energy consumption icon" />
-            <div className="overlap-group1">
-                <img className="icon-settings1" src={carbonFootprintIcon} alt="carbon footprint icon" />
-            </div>
-            <div className="settings-container">
-                <img className="icon-settings" src={ProductionBigIcon} alt="icon-settings" />
-                <SettingsIcon />
-            </div>
-            <img className="sidebar-menu-item" src={iconSettings2} alt="icon-settings" />
+            <Link to='/dashboard/dashboard'>
+                <img className="dashboard-icon" src={dashboardIcon} alt="dashboard icon" />
+            </Link>
+            
+            <Link to='/energycosts/dashboard'>
+                <img className="sidebar-menu-item" src={energyCostsIcon} alt="energy costs icon" />
+            </Link>
+
+            <Link to='/energyconsumption/dashboard'>
+                <img className="sidebar-menu-item" src={energyConsumptionIcon} alt="energy consumption icon" />
+            </Link>
+
+            <Link to='/carbonfootprint/dashboard'>
+                <div className="overlap-group1">
+                    <img className="icon-settings1" src={carbonFootprintIcon} alt="carbon footprint icon" />
+                </div>
+            </Link>
+
+            <Link to='/production/dashboard'>
+                <div className="settings-container">
+                    <img className="icon-settings" src={ProductionBigIcon} alt="icon-settings" />
+                    <SettingsIcon />
+                </div>
+            </Link>
+            
+            <Link to='/settings'>
+                <img className="sidebar-menu-item" src={iconSettings2} alt="icon-settings" />
+            </Link>
         </div>
     );
 }

@@ -14,20 +14,36 @@ import {Link} from 'react-router-dom'
 function Sidebar() {
     return(
         <div className="sidebar-menu">
-            <img className="dashboard-icon" src={dashboardIcon} alt="dashboard icon" />
-                <Link to='/energycosts/hungary'>
-                    <img className="sidebar-menu-item" src={energyCostsIcon} alt="energy costs icon" />
-                </Link>
+            <Link to='/dashboard/dashboard'>
+                <img className="dashboard-icon" src={dashboardIcon} alt="dashboard icon" />
+            </Link>
+            
+            <Link to='/energycosts/dashboard'>
+                <img className="sidebar-menu-item" src={energyCostsIcon} alt="energy costs icon" />
+            </Link>
 
-            <div className="overlap-group1">
-                <img className="icon-settings1" src={energyConsumptionIcon} alt="energy consumption icon" />
-            </div>
-            <img className="sidebar-menu-item" src={carbonFootprintIcon} alt="carbon footprint icon" />
-            <div className="settings-container">
-                <img className="icon-settings" src={ProductionBigIcon} alt="icon-settings" />
-                <SettingsIcon />
-            </div>
-            <img className="sidebar-menu-item" src={iconSettings2} alt="icon-settings" />
+            <Link to='/energyconsumption/dashboard'>
+                <div className="overlap-group1">
+                    <img className="icon-settings1" src={energyConsumptionIcon} alt="energy consumption icon" />
+                </div>
+            </Link>
+
+            <Link to='/carbonfootprint/dashboard'>
+                <img className="sidebar-menu-item" src={carbonFootprintIcon} alt="carbon footprint icon" />
+            </Link>
+            
+            <Link to='/production/dashboard'>
+                <div className="settings-container">
+                    <img className="icon-settings" src={ProductionBigIcon} alt="icon-settings" />
+                    <SettingsIcon />
+                </div>
+            </Link>
+            
+
+            <Link to='/settings'>
+                <img className="sidebar-menu-item" src={iconSettings2} alt="icon-settings" />
+            </Link>
+            
         </div>
     );
 }

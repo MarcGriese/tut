@@ -100,6 +100,7 @@
     40px 40px 80px #009e4d40;
     display: flex;
     flex-direction: column;
+    left: 15px;
     min-height: 230px;
     padding: 15px 17px;
     position: relative;
@@ -279,6 +280,8 @@
     box-shadow: 4px 4px 4px #009e4d1c,
     40px 40px 80px #009e4d40;
     display: flex;
+    position: relative;
+    left: 15px;
     height: 230px;
     min-width: 300px;
     padding: 19px 20px;

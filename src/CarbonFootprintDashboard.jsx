@@ -1,15 +1,15 @@
 import React from "react";
-import Sidebar from './Sidebars/SidebarEnergyCosts'
+import Sidebar from './Sidebars/SidebarCarbonFootprint'
 import menuIconTopRight from './assets/menu-icon-top-right-1.svg'
 import schneiderElectricLogo from './assets/schneider-electric-logo.svg'
-import icon from './assets/energy-costs-icon-1.svg'
+import icon from './assets/carbon-footprint-icon-1.svg'
 import arrowLeftIcon from './assets/arrow-left.svg'
 import arrowRightIcon from './assets/arrow-right.svg'
 import bubble from './assets/bubble.svg'
 import './Dashboards.css'
 import {Link} from 'react-router-dom'
 
-function EnergyCostsDashboard() {
+function CarbonFootprintDashboard() {
     return(
         <div className="container-center-horizontal">
             <div className="energy-costs screen">
@@ -22,7 +22,7 @@ function EnergyCostsDashboard() {
                                 <div className="total-energy-costs">
                                     <div className="flex-row-1">
                                         <div className="header aileron-regular-normal-white-16px">
-                                            <span className="aileron-regular-normal-white-16px">TOTAL ENERGY COSTS</span>
+                                            <span className="aileron-regular-normal-white-16px">TOTAL CO2 EMISSIONS</span>
                                         </div>
                                         <img className="icon" src={icon} alt="icon" />
                                     </div>
@@ -38,7 +38,7 @@ function EnergyCostsDashboard() {
                                     </div>
                                     </div>
 
-                                    <Link to='/energycosts/hungary'>
+                                    <Link to='/carbonfootprint/hungary'>
                                         <div className="plant-2">
                                             <div className="plant-1 aileron-regular-normal-white-16px">
                                                 <span className="aileron-regular-normal-white-16px">PLANT HUNGARY</span>
@@ -46,7 +46,7 @@ function EnergyCostsDashboard() {
                                         </div>
                                     </Link>
 
-                                    <Link to='/energycosts/germany'>
+                                    <Link to='/carbonfootprint/germany'>
                                         <div className="plant-2">
                                             <div className="plant-1 aileron-regular-normal-white-16px">
                                                 <span className="aileron-regular-normal-white-16px">PLANT GERMANY</span>
@@ -71,7 +71,7 @@ function EnergyCostsDashboard() {
                     </div>
                     <img className="schneider-electric-logo" src={schneiderElectricLogo} alt="Schneider Electric Logo" />
                     <div className="page-title aileron-bold-white-25px">
-                        <span className="aileron-bold-white-25px">ENERGY COSTS</span>
+                        <span className="aileron-bold-white-25px">CARBON FOOTPRINT</span>
                     </div>
                     <DaySelection />
                 </div>
@@ -80,7 +80,7 @@ function EnergyCostsDashboard() {
     );
 }
 
-export default EnergyCostsDashboard
+export default CarbonFootprintDashboard
 
 function Bubble() {
     return(
