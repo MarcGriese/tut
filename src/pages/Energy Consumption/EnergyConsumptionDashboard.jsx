@@ -1,13 +1,15 @@
 import React from "react";
-import Sidebar from './Sidebars/SidebarEnergyCosts'
-import menuIconTopRight from './assets/menu-icon-top-right-1.svg'
-import schneiderElectricLogo from './assets/schneider-electric-logo.svg'
-import icon from './assets/energy-costs-icon-1.svg'
-import arrowLeftIcon from './assets/arrow-left.svg'
-import arrowRightIcon from './assets/arrow-right.svg'
-import bubble from './assets/bubble.svg'
-import './Dashboards.css'
+import Sidebar from '../../Sidebars/SidebarEnergyConsumption'
+import menuIconTopRight from '../../assets/menu-icon-top-right-1.svg'
+import schneiderElectricLogo from '../../assets/schneider-electric-logo.svg'
+import icon from '../../assets/energy-consumption-icon-1.svg'
+import arrowLeftIcon from '../../assets/arrow-left.svg'
+import arrowRightIcon from '../../assets/arrow-right.svg'
+import bubble from '../../assets/bubble.svg'
+import '../../css/Dashboards.css'
 import {Link} from 'react-router-dom'
+import M314Chart from '../../Charts/Energy Consumption/ChartEnergyConsumptionM314hourly tiny'
+import M486Chart from '../../Charts/Energy Consumption/ChartEnergyConsumptionM486hourly tiny'
 
 function EnergyCostsDashboard() {
     return(
@@ -22,7 +24,7 @@ function EnergyCostsDashboard() {
                                 <div className="total-energy-costs">
                                     <div className="flex-row-1">
                                         <div className="header aileron-regular-normal-white-16px">
-                                            <span className="aileron-regular-normal-white-16px">TOTAL ENERGY COSTS</span>
+                                            <span className="aileron-regular-normal-white-16px">TOTAL ENERGY CONSUMPTION</span>
                                         </div>
                                         <img className="icon" src={icon} alt="icon" />
                                     </div>
@@ -38,7 +40,7 @@ function EnergyCostsDashboard() {
                                     </div>
                                     </div>
 
-                                    <Link to='/energycosts/hungary'>
+                                    <Link to='/energyconsumption/hungary'>
                                         <div className="plant-2">
                                             <div className="plant-1 aileron-regular-normal-white-16px">
                                                 <span className="aileron-regular-normal-white-16px">PLANT HUNGARY</span>
@@ -46,7 +48,7 @@ function EnergyCostsDashboard() {
                                         </div>
                                     </Link>
 
-                                    <Link to='/energycosts/germany'>
+                                    <Link to='/energyconsumption/germany'>
                                         <div className="plant-2">
                                             <div className="plant-1 aileron-regular-normal-white-16px">
                                                 <span className="aileron-regular-normal-white-16px">PLANT GERMANY</span>
@@ -55,23 +57,34 @@ function EnergyCostsDashboard() {
                                     </Link>
                                 </div>
                                 <div className="flex-row-2">
-                                    <div className="flex-row-item">
-                                        <div className="m314-spritzmaschine aileron-regular-normal-white-16px">
-                                            <span className="aileron-regular-normal-white-16px">M314 SPRITZMASCHINE</span>
+                                    <Link to='/energyconsumption/m314'>
+                                        <div className="flex-row-item">
+                                            <div className="m314-spritzmaschine aileron-regular-normal-white-16px">
+                                                <span className="aileron-regular-normal-white-16px">M314 SPRITZMASCHINE</span>
+                                            </div>
+                                            <div className="graph-tiny">
+                                                <M314Chart/>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div className="flex-row-item">
-                                        <div className="m486-assemblage aileron-regular-normal-white-16px">
-                                            <span className="aileron-regular-normal-white-16px">M486 ASSEMBLAGE</span>
+                                    </Link>
+                                    <Link to='/energyconsumption/m486'>
+                                        <div className="flex-row-item">
+                                            <div className="m486-assemblage aileron-regular-normal-white-16px">
+                                                <span className="aileron-regular-normal-white-16px">M486 ASSEMBLAGE</span>
+                                            </div>
+                                            <div className="graph-tiny">
+                                                <M486Chart/>
+                                            </div>
                                         </div>
-                                    </div>
+                                    </Link>
+                                    
                                 </div>
                             </div>
                         <img className="menu-icon-top-right" src={menuIconTopRight} alt="menu icon top right" />
                     </div>
                     <img className="schneider-electric-logo" src={schneiderElectricLogo} alt="Schneider Electric Logo" />
                     <div className="page-title aileron-bold-white-25px">
-                        <span className="aileron-bold-white-25px">ENERGY COSTS</span>
+                        <span className="aileron-bold-white-25px">ENERGY CONSUMPTION</span>
                     </div>
                     <DaySelection />
                 </div>

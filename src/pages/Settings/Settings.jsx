@@ -1,10 +1,10 @@
 import React from "react";
-import './global.css'
-import Sidebar from './Sidebars/SidebarSettings'
-import menuIconTopRight from './assets/menu-icon-top-right-1.svg'
-import iconSettings3 from './assets/schneider-electric-logo.svg'
-import arrowLeftIcon from './assets/arrow-left.svg'
-import arrowRightIcon from './assets/arrow-right.svg'
+import '../../css/global.css'
+import Sidebar from '../../Sidebars/SidebarSettings'
+import menuIconTopRight from '../../assets/menu-icon-top-right-1.svg'
+import iconSettings3 from '../../assets/schneider-electric-logo.svg'
+import arrowLeftIcon from '../../assets/arrow-left.svg'
+import arrowRightIcon from '../../assets/arrow-right.svg'
 
 function Settings() {
 

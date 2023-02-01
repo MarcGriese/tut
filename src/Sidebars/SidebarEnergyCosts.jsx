@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import '../global.css'
+import '../css/global.css'
 import dashboardIcon from '../assets/dashboard-icon-2.svg'
 import energyCostsIcon from '../assets/energy-costs-icon-1.svg'
 import energyConsumptionIcon from '../assets/energy-consumption-icon-1.svg'

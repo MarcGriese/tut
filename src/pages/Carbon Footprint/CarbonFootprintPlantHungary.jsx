@@ -1,14 +1,14 @@
 import React from "react";
-import './global.css'
-import menuIconTopRight from './assets/menu-icon-top-right-1.svg'
-import iconSettings3 from './assets/schneider-electric-logo.svg'
-import arrowLeftIcon from './assets/arrow-left.svg'
-import arrowRightIcon from './assets/arrow-right.svg'
-import Sidebar from './Sidebars/SidebarCarbonFootprint'
-import Chart from './Charts/ChartCarbonFootprintPlantGermany.js'
+import '../../css/global.css'
+import menuIconTopRight from '../../assets/menu-icon-top-right-1.svg'
+import iconSettings3 from '../../assets/schneider-electric-logo.svg'
+import arrowLeftIcon from '../../assets/arrow-left.svg'
+import arrowRightIcon from '../../assets/arrow-right.svg'
+import Sidebar from '../../Sidebars/SidebarCarbonFootprint'
+import Chart from '../../Charts/Carbon Footprint/ChartCarbonFootprintPlantHungary.js'
 
 
-function CarbonFootprintPlantGermany() {
+function CarbonFootprintPlantHungary() {
 
     return (
         <div className="container-center-horizontal">
@@ -41,7 +41,7 @@ function CarbonFootprintPlantGermany() {
                     </div>
                     <img className="schneider-electric-logo" src={iconSettings3} alt="Schneider Electric Logo" />
                     <div className="page-title aileron-bold-white-25px">
-                        <span className="aileron-bold-white-25px">PLANT GERMANY</span>
+                        <span className="aileron-bold-white-25px">PLANT HUNGARY</span>
                     </div>
                     <DaySelection />
                 </div>
@@ -62,4 +62,4 @@ function DaySelection() {
     );
 }
 
-export default CarbonFootprintPlantGermany;
+export default CarbonFootprintPlantHungary;

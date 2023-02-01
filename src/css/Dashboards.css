@@ -1,0 +1,304 @@
+@import './style.css';
+
+@font-face {
+    font-family: "Aileron-Bold";
+    font-style: normal;
+    font-weight: 700;
+    src: 
+    url("https://fonts.animaapp.com/Aileron-Bold") format("truetype");
+}
+
+@font-face {
+    font-family: "Aileron-Regular";
+    font-style: normal;
+    font-weight: 400;
+    src: 
+    url("https://fonts.animaapp.com/Aileron-Regular") format("opentype");
+}
+
+.screen a {
+    display: contents;
+    text-decoration: none;
+}
+
+.container-center-horizontal {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    pointer-events: none;
+    width: 100%;
+}
+
+.container-center-horizontal > * {
+    flex-shrink: 0;
+    pointer-events: auto;
+}
+
+.energy-costs {
+    align-items: flex-start;
+    background-color: var(--shark);
+    border: 1px none;
+    display: flex;
+    height: 1024px;
+    padding: 125px 86px;
+    width: 1440px;
+}
+
+.overlap-group3 {
+    height: 773px;
+    margin-top: 1px;
+    position: relative;
+    width: 1228px;
+}
+
+.background {
+    background-color: var(--cape-cod-2);
+    border-radius: 18px;
+    box-shadow: 4px 4px 4px #009e4d1c,
+    40px 40px 80px #009e4d40;
+    height: 773px;
+    left: 40px;
+    position: absolute;
+    top: 0px;
+    width: 1188px;
+}
+
+.fullscreen {
+    align-items: flex-end;
+    display: flex;
+    height: 602px;
+    left: 0;
+    min-width: 1187px;
+    position: absolute;
+    top: 49px
+}
+
+.panels {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 72px;
+    margin-left: 54px;
+    min-height: 532px;
+    width: 1000px;
+}
+
+.flex-row {
+    align-items: flex-start;
+    display: flex;
+    gap: 50px;
+    height: 230px;
+    min-width: 1000px;
+    position: relative;
+}
+
+.total-energy-costs {
+    align-items: flex-end;
+    background-color: var(--cape-cod-2);
+    border-radius: 14px;
+    box-shadow: 4px 4px 4px #009e4d1c,
+    40px 40px 80px #009e4d40;
+    display: flex;
+    flex-direction: column;
+    left: 15px;
+    min-height: 230px;
+    padding: 15px 17px;
+    position: relative;
+    width: 300px;
+}
+
+.flex-row-1 {
+    align-items: center;
+    display: flex;
+    gap: 66px;
+    min-width: 263px;
+}
+
+.header {
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: 5px;
+    margin-bottom: 2px;
+    min-height: 19px;
+    min-width: 168px;
+}
+
+.icon {
+    position: absolute;
+    top: 15px;
+    right: 17px;
+    height: 29px;
+    width: 29px;
+}
+
+.value {
+    align-self: flex-start;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 24px;
+    margin-left: 3px;
+    margin-top: 14px;
+    min-height: 48px;
+}
+
+.overlap-group-1 {
+    align-items: flex-start;
+    background-color: var(--sea-green);
+    border-radius: 10px;
+    position: relative;
+    top: 40px;
+    display: flex;
+    margin-top: 10px;
+    min-width: 263px;
+}
+
+.bar {
+    background-color: var(--green-haze);
+    border-radius: 10px;
+    height: 20px;
+    width: 199px;
+}
+
+.total-budget {
+    align-self: flex-start;
+    letter-spacing: 0;
+    line-height: normal;
+    position: relative;
+    top: 40px;
+    margin-left: 3px;
+    margin-top: 9px;
+    min-height: 19px;
+}
+
+.flex-row-2 {
+    align-items: flex-start;
+    display: flex;
+    gap: 50px;
+    height: 230px;
+    min-width: 1000px;
+}
+
+.flex-row-item {
+    align-items: flex-start;
+    background-color: var(--cape-cod-2);
+    box-shadow: 4px 4px 4px #009e4d1c,
+    40px 40px 80px #009e4d40;
+    border-radius: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+    min-height: 230px;
+    padding: 18px 20px;
+    width: 475px;
+}
+
+.m314-spritzmaschine,
+.m486-assemblage {
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: 1px;
+    min-height: 19px;
+}
+
+.menu-icon-top-right {
+    position: absolute;
+    height: 37px;
+    top: 0px;
+    margin-left: 1150px;
+    width: 37px;
+}
+
+.schneider-electric-logo {
+    height: 56px;
+    left: 80px;
+    object-fit: cover;
+    position: absolute;
+    top: 39px;
+    width: 186px;
+}
+
+.page-title {
+    left: 366px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 51px;
+}
+
+.bubble {
+    align-items: flex-start;
+    background-size: 100% 100%;
+    display: flex;
+    position: relative;
+    top: 25px;
+    left: 60px;
+    height: 28px;
+    margin-right: 52px;
+    margin-top: 12px;
+    min-width: 35px;
+    padding: 3px;
+}
+
+.percent {
+    position: relative;
+    left: -56px;
+    top: 22px;
+    letter-spacing: 0;
+    line-height: normal;
+    min-height: 17px;
+}
+
+.day-selection {
+    align-items: center;
+    display: flex;
+    gap: 26px;
+    height: 24px;
+    left: 864px;
+    min-width: 260px;
+    position: absolute;
+    top: 55px;
+}
+
+.arrow {
+    height: 24px;
+    width: 24px;
+}
+
+.date {
+    letter-spacing: 0;
+    line-height: normal;
+    margin-bottom: 1px;
+    min-height: 19px;
+    min-width: 160px;
+}
+
+.plant-2 {
+    align-items: flex-start;
+    background-color: var(--cape-cod-2);
+    border-radius: 14px;
+    box-shadow: 4px 4px 4px #009e4d1c,
+    40px 40px 80px #009e4d40;
+    display: flex;
+    position: relative;
+    left: 15px;
+    height: 230px;
+    min-width: 300px;
+    padding: 19px 20px;
+}
+
+.plant-1 {
+    letter-spacing: 0;
+    line-height: normal;
+    min-height: 19px;
+}
+
+.graph-tiny {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+    gap: 2px;
+    min-height: 148px;
+    width: 380px;
+}

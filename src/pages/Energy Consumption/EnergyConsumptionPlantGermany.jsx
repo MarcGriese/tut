@@ -1,14 +1,14 @@
 import React from "react";
-import './global.css'
-import menuIconTopRight from './assets/menu-icon-top-right-1.svg'
-import iconSettings3 from './assets/schneider-electric-logo.svg'
-import arrowLeftIcon from './assets/arrow-left.svg'
-import arrowRightIcon from './assets/arrow-right.svg'
-import Sidebar from './Sidebars/SidebarEnergyConsumption'
-import Chart from './Charts/ChartEnergyConsumptionPlantHungary.js'
+import '../../css/global.css'
+import menuIconTopRight from '../../assets/menu-icon-top-right-1.svg'
+import iconSettings3 from '../../assets/schneider-electric-logo.svg'
+import arrowLeftIcon from '../../assets/arrow-left.svg'
+import arrowRightIcon from '../../assets/arrow-right.svg'
+import Sidebar from '../../Sidebars/SidebarEnergyConsumption'
+import Chart from '../../Charts/Energy Consumption/ChartEnergyConsumptionPlantGermany.js'
 
 
-function EnergyConsumptionPlantHungary() {
+function EnergyConsumptionPlantGermany() {
 
     return (
         <div className="container-center-horizontal">
@@ -41,7 +41,7 @@ function EnergyConsumptionPlantHungary() {
                     </div>
                     <img className="schneider-electric-logo" src={iconSettings3} alt="Schneider Electric Logo" />
                     <div className="page-title aileron-bold-white-25px">
-                        <span className="aileron-bold-white-25px">PLANT HUNGARY</span>
+                        <span className="aileron-bold-white-25px">PLANT GERMANY</span>
                     </div>
                     <DaySelection />
                 </div>
@@ -62,4 +62,4 @@ function DaySelection() {
     );
 }
 
-export default EnergyConsumptionPlantHungary;
+export default EnergyConsumptionPlantGermany;
