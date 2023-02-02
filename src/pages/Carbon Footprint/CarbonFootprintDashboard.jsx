@@ -7,10 +7,12 @@ import arrowLeftIcon from '../../assets/arrow-left.svg'
 import arrowRightIcon from '../../assets/arrow-right.svg'
 import bubble from '../../assets/bubble.svg'
 import '../../css/Dashboards.css'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
+import M314Chart from '../../Charts/Carbon Footprint/ChartCarbonFootprintM314hourly tiny'
+import M486Chart from '../../Charts/Carbon Footprint/ChartCarbonFootprintM486hourly tiny'
 
 function CarbonFootprintDashboard() {
-    return(
+    return (
         <div className="container-center-horizontal">
             <div className="energy-costs screen">
                 <div className="overlap-group3">
@@ -19,54 +21,68 @@ function CarbonFootprintDashboard() {
                         <Sidebar />
                         <div className="panels">
                             <div className="flex-row">
-                                <div className="total-energy-costs">
-                                    <div className="flex-row-1">
-                                        <div className="header aileron-regular-normal-white-16px">
-                                            <span className="aileron-regular-normal-white-16px">TOTAL CO2 EMISSIONS</span>
-                                        </div>
-                                        <img className="icon" src={icon} alt="icon" />
-                                    </div>
-                                    <h1 className="value aileron-bold-green-haze-40px">
-                                        <span className="aileron-bold-green-haze-40px">35.000€</span>
-                                    </h1>
-                                    <Bubble />
-                                    <div className="overlap-group-1">
-                                        <div className="bar"></div>
-                                    </div>
-                                    <div className="total-budget aileron-bold-white-16px">
-                                        <span className="aileron-bold-white-16px">Total Budget</span>
-                                    </div>
-                                    </div>
-
-                                    <Link to='/carbonfootprint/hungary'>
-                                        <div className="plant-2">
-                                            <div className="plant-1 aileron-regular-normal-white-16px">
-                                                <span className="aileron-regular-normal-white-16px">PLANT HUNGARY</span>
+                                <Link to='/carbonfootprint/general'>
+                                    <div className="total-energy-costs">
+                                        <div className="flex-row-1">
+                                            <div className="header aileron-regular-normal-white-16px">
+                                                <span className="aileron-regular-normal-white-16px">TOTAL CO2 EMISSIONS</span>
                                             </div>
+                                            <img className="icon" src={icon} alt="icon" />
                                         </div>
-                                    </Link>
+                                        <h1 className="value aileron-bold-green-haze-40px">
+                                            <span className="aileron-bold-green-haze-40px">35.000€</span>
+                                        </h1>
+                                        <Bubble />
+                                        <div className="overlap-group-1">
+                                            <div className="bar"></div>
+                                        </div>
+                                        <div className="total-budget aileron-bold-white-16px">
+                                            <span className="aileron-bold-white-16px">Total Budget</span>
+                                        </div>
+                                    </div>
+                                </Link>
 
-                                    <Link to='/carbonfootprint/germany'>
-                                        <div className="plant-2">
-                                            <div className="plant-1 aileron-regular-normal-white-16px">
-                                                <span className="aileron-regular-normal-white-16px">PLANT GERMANY</span>
-                                            </div>
+                                <Link to='/carbonfootprint/hungary'>
+                                    <div className="plant-2">
+                                        <div className="plant-1 aileron-regular-normal-white-16px">
+                                            <span className="aileron-regular-normal-white-16px">PLANT HUNGARY</span>
                                         </div>
-                                    </Link>
-                                </div>
-                                <div className="flex-row-2">
+                                    </div>
+                                </Link>
+
+                                <Link to='/carbonfootprint/germany'>
+                                    <div className="plant-2">
+                                        <div className="plant-1 aileron-regular-normal-white-16px">
+                                            <span className="aileron-regular-normal-white-16px">PLANT GERMANY</span>
+                                        </div>
+                                    </div>
+                                </Link>
+                            </div>
+                            <div className="flex-row-2">
+                                <Link to='/carbonfootprint/m314'>
                                     <div className="flex-row-item">
                                         <div className="m314-spritzmaschine aileron-regular-normal-white-16px">
                                             <span className="aileron-regular-normal-white-16px">M314 SPRITZMASCHINE</span>
                                         </div>
+                                        <div className="graph-tiny">
+                                            <M314Chart />
+                                        </div>
                                     </div>
+                                </Link>
+
+                                <Link to='/carbonfootprint/m486'>
                                     <div className="flex-row-item">
                                         <div className="m486-assemblage aileron-regular-normal-white-16px">
                                             <span className="aileron-regular-normal-white-16px">M486 ASSEMBLAGE</span>
                                         </div>
+                                        <div className="graph-tiny">
+                                            <M486Chart />
+                                        </div>
                                     </div>
-                                </div>
+                                </Link>
+
                             </div>
+                        </div>
                         <img className="menu-icon-top-right" src={menuIconTopRight} alt="menu icon top right" />
                     </div>
                     <img className="schneider-electric-logo" src={schneiderElectricLogo} alt="Schneider Electric Logo" />
@@ -83,7 +99,7 @@ function CarbonFootprintDashboard() {
 export default CarbonFootprintDashboard
 
 function Bubble() {
-    return(
+    return (
         <div className="bubble" >
             <img className="" src={bubble} alt="bubble" />
             <div className="percent aileron-bold-white-14px">
@@ -94,7 +110,7 @@ function Bubble() {
 }
 
 function DaySelection() {
-    return(
+    return (
         <div className="day-selection">
             <img className="arrow" src={arrowLeftIcon} alt="arrow left" />
             <div className="date aileron-regular-normal-white-16px">

@@ -13,36 +13,51 @@ import CarbonFootprintPlantGermany from './pages/Carbon Footprint//CarbonFootpri
 import CarbonFootprintPlantHungary from './pages/Carbon Footprint//CarbonFootprintPlantHungary'
 import Settings from './pages/Settings/Settings'
 
+import CarbonFootprintM314hourly from './pages/Carbon Footprint/CarbonFootprintM314hourly'
+import CarbonFootprintM486hourly from './pages/Carbon Footprint/CarbonFootprintM486hourly'
 
+import EnergyCostsM314hourly from './pages/Energy Costs/EnergyCostsM314hourly'
+import EnergyCostsM486hourly from './pages/Energy Costs/EnergyCostsM486hourly'
+import Dashboard from './pages/Dashboard/Dashboard'
+import TotalEnergyCosts from './pages/Dashboard/EnergyCosts'
+import TotalEnergyConsumption from './pages/Dashboard/EnergyConsumption'
+import TotalCarbonFootprint from './pages/Dashboard/CarbonFootprint'
 
 export default function App() {
-    return(
+    return (
         <BrowserRouter>
-        <Routes>
-            <Route path='/'>
-                <Route path='test' element={<EnergyCostsDashboard/>}/>
-                <Route path='energyconsumption'>
-                    <Route path='dashboard' element={<EnergyConsumptionDashboard/>}/>
-                    <Route path='m314' element={<EnergyConsumptionM314hourly/>}/>
-                    <Route path='m486' element={<EnergyConsumptionM486hourly/>}/>
-                    <Route path='germany' element={<EnergyConsumptionPlantGermany/>}/>
-                    <Route path='hungary' element={<EnergyConsumptionPlantHungary/>}/>
-                </Route>
+            <Routes>
+                <Route path='/'>
+                    <Route path='dashboard' element={<Dashboard />} />
+                    <Route path='energyconsumption'>
+                        <Route path='dashboard' element={<EnergyConsumptionDashboard />} />
+                        <Route path='general' element={<TotalEnergyConsumption />} />
+                        <Route path='m314' element={<EnergyConsumptionM314hourly />} />
+                        <Route path='m486' element={<EnergyConsumptionM486hourly />} />
+                        <Route path='germany' element={<EnergyConsumptionPlantGermany />} />
+                        <Route path='hungary' element={<EnergyConsumptionPlantHungary />} />
+                    </Route>
 
-                <Route path='energycosts'>
-                    <Route path='dashboard' element={<EnergyCostsDashboard/>}/>
-                    <Route path='germany' element={<EnergyCostsPlantGermany/>}/>
-                    <Route path='hungary' element={<EnergyCostsPlantHungary/>}/>
-                </Route>
+                    <Route path='energycosts'>
+                        <Route path='dashboard' element={<EnergyCostsDashboard />} />
+                        <Route path='general' element={<TotalEnergyCosts />} />
+                        <Route path='m314' element={<EnergyCostsM314hourly />} />
+                        <Route path='m486' element={<EnergyCostsM486hourly />} />
+                        <Route path='germany' element={<EnergyCostsPlantGermany />} />
+                        <Route path='hungary' element={<EnergyCostsPlantHungary />} />
+                    </Route>
 
-                <Route path='carbonfootprint'>
-                    <Route path='dashboard' element={<CarbonFootprintDashboard/>}/>
-                    <Route path='germany' element={<CarbonFootprintPlantGermany/>}/>
-                    <Route path='hungary' element={<CarbonFootprintPlantHungary/>}/>
+                    <Route path='carbonfootprint'>
+                        <Route path='dashboard' element={<CarbonFootprintDashboard />} />
+                        <Route path='general' element={<TotalCarbonFootprint />} />
+                        <Route path='m314' element={<CarbonFootprintM314hourly />} />
+                        <Route path='m486' element={<CarbonFootprintM486hourly />} />
+                        <Route path='germany' element={<CarbonFootprintPlantGermany />} />
+                        <Route path='hungary' element={<CarbonFootprintPlantHungary />} />
+                    </Route>
+                    <Route path='settings' element={<Settings />} />
                 </Route>
-                <Route path='settings' element={<Settings/>}/>
-            </Route>
-        </Routes>
+            </Routes>
         </BrowserRouter>
     );
 }

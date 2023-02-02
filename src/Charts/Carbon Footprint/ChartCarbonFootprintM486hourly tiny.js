@@ -2,14 +2,14 @@ import React from "react";
 import { Line } from 'react-chartjs-2'
 import 'chart.js/auto'
 
-function ChartEnergyConsumptionM314hourly() {
+function ChartCarbonFootprintM486hourly() {
 
     //testChart.style.backgroundColor = 'rgba(67,67,67,1)'
 
     const data = {
         labels: ['00:00', '06:00', '12:00', '18:00', '24:00'],
         datasets: [{
-            label: 'ENERGY CONSUMPTION M314 SPRITZMASCHINE',
+            label: 'CARBON FOOTPRINT M486 ASSEMBLAGE',
             data: [NaN, NaN, NaN, NaN, NaN],
             //Connection lines between points
             borderWidth: 3,
@@ -58,7 +58,7 @@ function ChartEnergyConsumptionM314hourly() {
                 ticks: {
                     color: 'rgba(255, 255, 255, 1',
                     font: {
-                        size: 12
+                        size: 10
                     },
                     stepSize: 2,
                     //creates labels for y-axis
@@ -72,7 +72,7 @@ function ChartEnergyConsumptionM314hourly() {
                 ticks: {
                     color: 'rgba(255, 255, 255, 1)',
                     font: {
-                        size: 12
+                        size: 10
                     }
                 },
                 //grid lines config
@@ -87,9 +87,9 @@ function ChartEnergyConsumptionM314hourly() {
 
     return(
         <div>
-            <Line data={data} options={options} height={395} width={900}></Line>
+            <Line data={data} options={options}></Line>
         </div>
     )
 }
 
-export default ChartEnergyConsumptionM314hourly
+export default ChartCarbonFootprintM486hourly

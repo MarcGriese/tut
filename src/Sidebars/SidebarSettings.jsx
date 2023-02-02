@@ -14,7 +14,7 @@ import { Link } from "react-router-dom";
 function Sidebar() {
     return(
         <div className="sidebar-menu">
-            <Link to='/energymonitoring/dashboard'>
+            <Link to='/dashboard'>
                 <img className="dashboard-icon" src={dashboardIcon} alt="dashboard icon" /> 
             </Link>
 

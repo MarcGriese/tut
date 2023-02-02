@@ -53,17 +53,17 @@ function ChartEnergyConsumptionM486hourly() {
                 },
                 beginAtZero: true,
                 min: 0,
-                max: 8000,
+                max: 8,
                 //y axis labels config
                 ticks: {
                     color: 'rgba(255, 255, 255, 1',
                     font: {
                         size: 10
                     },
-                    stepSize: 2000,
+                    stepSize: 2,
                     //creates labels for y-axis
                     callback: function(value, index, values) {
-                        return value + 'W'
+                        return value + ' kWh'
                     }
                 }
             },

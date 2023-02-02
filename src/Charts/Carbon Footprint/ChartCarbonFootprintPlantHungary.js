@@ -36,12 +36,7 @@ function testChart() {
     const options = {
         plugins: {
             legend: {
-                labels: {
-                    color: 'rgba(0, 158, 77, 1)',
-                    font: {
-                        size: 16
-                    }
-                }
+                display: false,
             }
         },
         scales: {

@@ -2,14 +2,14 @@ import React from "react";
 import { Line } from 'react-chartjs-2'
 import 'chart.js/auto'
 
-function ChartEnergyConsumptionM314hourly() {
+function ChartEnergyCostsM314hourly() {
 
     //testChart.style.backgroundColor = 'rgba(67,67,67,1)'
 
     const data = {
         labels: ['00:00', '06:00', '12:00', '18:00', '24:00'],
         datasets: [{
-            label: 'ENERGY CONSUMPTION M314 SPRITZMASCHINE',
+            label: 'ENERGY COSTS M314 SPRITZMASCHINE',
             data: [NaN, NaN, NaN, NaN, NaN],
             //Connection lines between points
             borderWidth: 3,
@@ -92,4 +92,4 @@ function ChartEnergyConsumptionM314hourly() {
     )
 }
 
-export default ChartEnergyConsumptionM314hourly
+export default ChartEnergyCostsM314hourly

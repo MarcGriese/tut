@@ -2,15 +2,15 @@ import React from "react";
 import { Line } from 'react-chartjs-2'
 import 'chart.js/auto'
 
-function ChartEnergyConsumptionM314hourly() {
+function ChartCarbonFootprintGeneral() {
 
     //testChart.style.backgroundColor = 'rgba(67,67,67,1)'
 
     const data = {
-        labels: ['00:00', '06:00', '12:00', '18:00', '24:00'],
+        labels: ['jan', 'feb', 'mar', 'apr', 'may', 'june', 'july', 'aug', 'sep', 'oct', 'nov', 'dec'],
         datasets: [{
-            label: 'ENERGY CONSUMPTION M314 SPRITZMASCHINE',
-            data: [NaN, NaN, NaN, NaN, NaN],
+            label: 'CO2 EMISSIONS GENERAL',
+            data: [796055, 824634, 792731, 841236, 803550, 905087, 799998, 846055, 752934, 795677, 832975, 866542],
             //Connection lines between points
             borderWidth: 3,
             showLine: true,
@@ -53,17 +53,17 @@ function ChartEnergyConsumptionM314hourly() {
                 },
                 beginAtZero: true,
                 min: 0,
-                max: 8,
+                max: 1200000,
                 //y axis labels config
                 ticks: {
                     color: 'rgba(255, 255, 255, 1',
                     font: {
                         size: 12
                     },
-                    stepSize: 2,
+                    stepSize: 300000,
                     //creates labels for y-axis
                     callback: function(value, index, values) {
-                        return value + ' kWh'
+                        return value + 't CO2'
                     }
                 }
             },
@@ -87,9 +87,9 @@ function ChartEnergyConsumptionM314hourly() {
 
     return(
         <div>
-            <Line data={data} options={options} height={395} width={900}></Line>
+            <Line data={data} options={options} height={428} width={900}></Line>
         </div>
     )
 }
 
-export default ChartEnergyConsumptionM314hourly
+export default ChartCarbonFootprintGeneral

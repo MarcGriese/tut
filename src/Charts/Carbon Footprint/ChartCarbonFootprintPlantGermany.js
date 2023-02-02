@@ -2,7 +2,7 @@ import React from "react";
 import { Line } from 'react-chartjs-2'
 import 'chart.js/auto'
 
-function testChart() {
+function ChartCarbonFootprintPlantGermany() {
 
     //testChart.style.backgroundColor = 'rgba(67,67,67,1)'
 
@@ -36,12 +36,7 @@ function testChart() {
     const options = {
         plugins: {
             legend: {
-                labels: {
-                    color: 'rgba(0, 158, 77, 1)',
-                    font: {
-                        size: 16
-                    }
-                }
+                display: false,
             }
         },
         scales: {
@@ -97,4 +92,4 @@ function testChart() {
     )
 }
 
-export default testChart
+export default ChartCarbonFootprintPlantGermany

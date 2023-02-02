@@ -4,11 +4,11 @@ import menuIconTopRight from '../../assets/menu-icon-top-right-1.svg'
 import iconSettings3 from '../../assets/schneider-electric-logo.svg'
 import arrowLeftIcon from '../../assets/arrow-left.svg'
 import arrowRightIcon from '../../assets/arrow-right.svg'
-import Sidebar from '../../Sidebars/SidebarEnergyCosts'
-import Chart from '../../Charts/Energy Costs/ChartEnergyCostsM486hourly.js'
+import Sidebar from '../../Sidebars/SidebarCarbonFootprint'
+import Chart from '../../Charts/Carbon Footprint/ChartCarbonFootprintM314hourly.js'
 
 
-function EnergyCostsM486hourly() {
+function CarbonFootprintM314hourly() {
 
     return (
         <div className="container-center-horizontal">
@@ -21,7 +21,7 @@ function EnergyCostsM486hourly() {
                                     <div className="flex-row-1">
                                         <header className="header">
                                             <div className="title-consumption aileron-regular-normal-white-16px">
-                                                <span className="aileron-regular-normal-white-16px">THIS HOUR'S ENERGY COSTS:</span>
+                                                <span className="aileron-regular-normal-white-16px">THIS HOUR'S CO2 EMISSIONS:</span>
                                             </div>
                                             <h1 className="value-consumption aileron-bold-green-haze-40px">
                                                 <span className="aileron-bold-green-haze-40px">value</span>
@@ -47,7 +47,7 @@ function EnergyCostsM486hourly() {
                     </div>
                     <img className="schneider-electric-logo" src={iconSettings3} alt="Schneider Electric Logo" />
                     <div className="page-title aileron-bold-white-25px">
-                        <span className="aileron-bold-white-25px">M486 ASSEMBLAGE</span>
+                        <span className="aileron-bold-white-25px">M314 SPRITZMASCHINE</span>
                     </div>
                     <DaySelection />
                 </div>
@@ -68,4 +68,4 @@ function DaySelection() {
     );
 }
 
-export default EnergyCostsM486hourly;
+export default CarbonFootprintM314hourly;

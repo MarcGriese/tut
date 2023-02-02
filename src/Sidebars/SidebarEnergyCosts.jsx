@@ -14,7 +14,7 @@ import ProductionSmallIcon from '../assets/subtract-2.svg'
 function Sidebar() {
     return(
         <div className="sidebar-menu">
-            <Link to='/dashboard/dashboard'>
+            <Link to='/dashboard'>
                 <img className="dashboard-icon" src={dashboardIcon} alt="dashboard icon" />
             </Link>
 

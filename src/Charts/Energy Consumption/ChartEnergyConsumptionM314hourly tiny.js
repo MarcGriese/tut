@@ -10,7 +10,7 @@ function ChartEnergyConsumptionM314hourly() {
         labels: ['00:00', '06:00', '12:00', '18:00', '24:00'],
         datasets: [{
             label: 'ENERGY CONSUMPTION M314 SPRITZMASCHINE',
-            data: [NaN, NaN, NaN, NaN, NaN],
+            data: [NaN, 8, 3, 4.5, 5],
             //Connection lines between points
             borderWidth: 3,
             showLine: true,
@@ -53,17 +53,17 @@ function ChartEnergyConsumptionM314hourly() {
                 },
                 beginAtZero: true,
                 min: 0,
-                max: 8000,
+                max: 8,
                 //y axis labels config
                 ticks: {
                     color: 'rgba(255, 255, 255, 1',
                     font: {
                         size: 10
                     },
-                    stepSize: 2000,
+                    stepSize: 2,
                     //creates labels for y-axis
                     callback: function(value, index, values) {
-                        return value + 'W'
+                        return value + ' kWh'
                     }
                 }
             },

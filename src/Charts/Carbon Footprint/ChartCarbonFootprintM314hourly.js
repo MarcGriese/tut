@@ -2,7 +2,7 @@ import React from "react";
 import { Line } from 'react-chartjs-2'
 import 'chart.js/auto'
 
-function ChartEnergyConsumptionM314hourly() {
+function ChartCarbonFootprintM314hourly() {
 
     //testChart.style.backgroundColor = 'rgba(67,67,67,1)'
 
@@ -92,4 +92,4 @@ function ChartEnergyConsumptionM314hourly() {
     )
 }
 
-export default ChartEnergyConsumptionM314hourly
+export default ChartCarbonFootprintM314hourly
