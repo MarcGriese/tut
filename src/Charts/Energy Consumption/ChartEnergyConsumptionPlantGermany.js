@@ -1,8 +1,24 @@
 import React from "react";
 import { Line } from 'react-chartjs-2'
 import 'chart.js/auto'
+// import sqlQuery from '../../backend/dbFiles/sqlQuery'
+// var expr = 'SELECT * FROM [energyMonitoring].[dbo].[energy_costs]'
 
-function testChart() {
+// console.log(sqlQuery(expr))
+
+
+
+
+
+
+
+
+
+
+
+
+function TestChart() {
+
 
     //testChart.style.backgroundColor = 'rgba(67,67,67,1)'
 
@@ -10,7 +26,7 @@ function testChart() {
         labels: ['jan', 'feb', 'mar', 'apr', 'may', 'june', 'july', 'aug', 'sep', 'oct', 'nov', 'dec'],
         datasets: [{
             label: 'ENERGY CONSUMPTION PLANT GERMANY',
-            data: [1895367, 1963413, 1887454, 2002944, 1913214, 2154969, 1904758, 2014417, 1792700, 1894468, 1983274, 2063195],
+            data: [],
             //Connection lines between points
             borderWidth: 3,
             showLine: true,
@@ -92,4 +108,4 @@ function testChart() {
     )
 }
 
-export default testChart
+export default TestChart
