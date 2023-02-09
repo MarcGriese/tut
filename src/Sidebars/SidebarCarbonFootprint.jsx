@@ -14,35 +14,43 @@ import { Link } from "react-router-dom";
 function Sidebar() {
     return(
         <div className="sidebar-menu">
+        <div className="icon-item__container">
             <Link to='/dashboard'>
-                <img className="dashboard-icon" src={dashboardIcon} alt="dashboard icon" />
+                    <img className="icon-settings1" src={dashboardIcon} alt="dashboard icon" />
             </Link>
+        </div>
             
+        <div className="icon-item__container">
             <Link to='/energycosts/dashboard'>
                 <img className="sidebar-menu-item" src={energyCostsIcon} alt="energy costs icon" />
             </Link>
-
+        </div>
+        <div className="icon-item__container">
             <Link to='/energyconsumption/dashboard'>
                 <img className="sidebar-menu-item" src={energyConsumptionIcon} alt="energy consumption icon" />
             </Link>
-
+        </div>
+        <div className="icon-item__container">
             <Link to='/carbonfootprint/dashboard'>
                 <div className="overlap-group1">
-                    <img className="icon-settings1" src={carbonFootprintIcon} alt="carbon footprint icon" />
+                    <img className="sidebar-menu-item" src={carbonFootprintIcon} alt="carbon footprint icon" />
                 </div>
             </Link>
-
-            <Link to='/production/dashboard'>
+        </div>
+        <div className="icon-item__container">
+        <Link to='/production/dashboard'>
                 <div className="settings-container">
                     <img className="icon-settings" src={ProductionBigIcon} alt="icon-settings" />
                     <SettingsIcon />
                 </div>
             </Link>
-            
-            <Link to='/settings'>
+        </div>
+        <div className="icon-item__container">
+        <Link to='/settings'>
                 <img className="sidebar-menu-item" src={iconSettings2} alt="icon-settings" />
             </Link>
         </div>
+  </div>
     );
 }
 

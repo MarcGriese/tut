@@ -13,18 +13,43 @@ import ProductionSmallIcon from '../assets/subtract-2.svg'
 function Sidebar() {
     return(
         <div className="sidebar-menu">
-            <img className="dashboard-icon" src={dashboardIcon} alt="dashboard icon" />
-            <img className="sidebar-menu-item" src={energyCostsIcon} alt="energy costs icon" />
-            <img className="sidebar-menu-item" src={energyConsumptionIcon} alt="energy consumption icon" />
-            <img className="sidebar-menu-item" src={carbonFootprintIcon} alt="carbon footprint icon" />
-            <div className="overlap-group1">
-                <div className="settings-container">
-                    <img className="icon-settings" src={ProductionBigIcon} alt="icon-settings" />
-                    <SettingsIcon />
-                </div>
-            </div>
-            <img className="sidebar-menu-item" src={iconSettings2} alt="icon-settings" />
+        <div className="icon-item__container">
+            <Link to='/dashboard'>
+                        <img className="icon-settings1" src={dashboardIcon} alt="dashboard icon" />
+            </Link>
         </div>
+            
+        <div className="icon-item__container">
+            <Link to='/energycosts/dashboard'>
+                <img className="sidebar-menu-item" src={energyCostsIcon} alt="energy costs icon" />
+            </Link>
+        </div>
+        <div className="icon-item__container">
+            <Link to='/energyconsumption/dashboard'>
+                <img className="sidebar-menu-item" src={energyConsumptionIcon} alt="energy consumption icon" />
+            </Link>
+        </div>
+        <div className="icon-item__container">
+            <Link to='/carbonfootprint/dashboard'>
+                <img className="sidebar-menu-item" src={carbonFootprintIcon} alt="carbon footprint icon" />
+            </Link>
+        </div>
+        <div className="icon-item__container">
+        <Link to='/production/dashboard'>
+                <div className="settings-container">
+                    <div className="overlap-group1">
+                        <img className="icon-settings" src={ProductionBigIcon} alt="icon-settings" />
+                        <SettingsIcon />
+                    </div>
+                </div>
+            </Link>
+        </div>
+        <div className="icon-item__container">
+        <Link to='/settings'>
+                <img className="sidebar-menu-item" src={iconSettings2} alt="icon-settings" />
+            </Link>
+        </div>
+  </div>
     );
 }
 

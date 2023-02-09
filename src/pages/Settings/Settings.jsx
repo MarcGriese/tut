@@ -10,10 +10,9 @@ function Settings() {
 
     return (
         <div className="container-center-horizontal">
-            <div className="settings screen">
-                
-                <div className="overlap-group2">
-                    <div className="background"></div>
+            <div className="energy-costs screen">
+                <div className="overlap-group3">
+                <div className="background"></div>
                     <div className="fullscreen">
                         <Sidebar />
                         <div className="total-energy-consumption-interior">
@@ -30,6 +29,7 @@ function Settings() {
                     </div>
                     <DaySelection />
                 </div>
+                
             </div>
         </div>
     );
