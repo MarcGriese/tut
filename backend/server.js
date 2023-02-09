@@ -5,6 +5,7 @@ var sql = require('mssql/msnodesqlv8');
 var config = {
     connectionString: 'Driver=SQL Server; Server=WTDELVSE197671L\\SQLEXPRESS;database: energyMonitoring; trustedConnection: true;'
 };
+var XMLHttpRequest = require('xmlhttprequest').XMLHttpRequest
 
 app.use( express.json())
 
@@ -19,11 +20,19 @@ let users
 //     });
 
 
-app.get('/user', (req, res) => {
-    res.status(200).send({ //send beinhaltet die Daten die beim abfragen der get request gesendet werden
-        users: 1
-    })
-})
+// app.get('/user', (req, res) => {
+//     res.status(200).send({ //send beinhaltet die Daten die beim abfragen der get request gesendet werden
+//         users: 1
+//     })
+// })
+
+let xhr = new XMLHttpRequest();
+
+xhr.open('GET','http://localhost:8080', false)
+
+xhr.send()
+
+xhr.response
 
 
 app.listen(
