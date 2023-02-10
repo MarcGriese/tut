@@ -22,6 +22,7 @@ import Dashboard from './pages/Dashboard/Dashboard'
 import TotalEnergyCosts from './pages/Dashboard/EnergyCosts'
 import TotalEnergyConsumption from './pages/Dashboard/EnergyConsumption'
 import TotalCarbonFootprint from './pages/Dashboard/CarbonFootprint'
+import ProductionDashboard from './pages/Production/ProductionDashboard'
 
 export default function Router() {
     return (
@@ -29,6 +30,7 @@ export default function Router() {
             <Routes>
                 <Route exact path='/'>
                     <Route path='dashboard' element={<Dashboard />} />
+
                     <Route path='energyconsumption'>
                         <Route path='dashboard' element={<EnergyConsumptionDashboard />} />
                         <Route path='general' element={<TotalEnergyConsumption />} />
@@ -55,6 +57,11 @@ export default function Router() {
                         <Route path='germany' element={<CarbonFootprintPlantGermany />} />
                         <Route path='hungary' element={<CarbonFootprintPlantHungary />} />
                     </Route>
+
+                    <Route path='production'>
+                        <Route path='dashboard' element={<ProductionDashboard />} />
+                    </Route>
+
                     <Route path='settings' element={<Settings />} />
                 </Route>
             </Routes>

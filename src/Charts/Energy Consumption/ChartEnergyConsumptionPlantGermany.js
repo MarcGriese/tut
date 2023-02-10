@@ -1,35 +1,47 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Line } from 'react-chartjs-2'
 import 'chart.js/auto'
 
-function TestChart() {
+const ChartEnergyConsumptionPlantGermany = () => {
+    const [chartData, setChartData] = useState({})
 
-    const data = {
-        labels: ['jan', 'feb', 'mar', 'apr', 'may', 'june', 'july', 'aug', 'sep', 'oct', 'nov', 'dec'],
-        datasets: [{
-            label: 'ENERGY CONSUMPTION PLANT GERMANY',
-            data: ["1000000"],
-            //Connection lines between points
-            borderWidth: 3,
-            showLine: true,
-            lineTension: 0.4,
-            borderColor: 'rgba(0, 158, 77, 1)',
+    useEffect(() => {
+        const fetchData = async () => {
+            const result = await fetch('http://localhost:8080/api/energyconsumption/germany')
+            const data = await result.json()
 
-            //options: legend
-            backgroundColor: 'rgba(0, 158, 77, 1)',
+            setChartData({
+                labels: data.labels,
+                datasets: [
+                    {
+                        label: 'ENERGY CONSUMPTION PLANT GERMANY',
+                        data: data.data,
+                        //Connection lines between points
+                        borderWidth: 3,
+                        showLine: true,
+                        lineTension: 0.4,
+                        borderColor: 'rgba(0, 158, 77, 1)',
 
-            //points:
-            pointBackgroundColor: 'rgba(0, 158, 77, 1)',
-            pointHoverBackgroundColor: 'rgba(255, 255, 255, 1)',
-            pointHoverBorderColor: 'rgba(0, 158, 77, 1)',
+                        //options: legend
+                        backgroundColor: 'rgba(0, 158, 77, 1)',
 
-            //fill chart:
-            fill: {
-                target: 'origin',
-                above: 'rgba(0, 158, 77, 0.4)'
-            }
-        }]
-    };
+                        //points:
+                        pointBackgroundColor: 'rgba(0, 158, 77, 1)',
+                        pointHoverBackgroundColor: 'rgba(255, 255, 255, 1)',
+                        pointHoverBorderColor: 'rgba(0, 158, 77, 1)',
+
+                        //fill chart:
+                        fill: {
+                            target: 'origin',
+                            above: 'rgba(0, 158, 77, 0.4)'
+                        }
+
+                    }
+                ]
+            })
+        }
+        fetchData()
+    }, [])
 
     const options = {
         plugins: {
@@ -47,7 +59,7 @@ function TestChart() {
                 },
                 //border
                 border: {
-                    display:false,
+                    display: false,
                 },
                 beginAtZero: true,
                 min: 0,
@@ -60,8 +72,8 @@ function TestChart() {
                     },
                     stepSize: 600000,
                     //creates labels for y-axis
-                    callback: function(value, index, values) {
-                        return value/1000000 + 'm kWh'
+                    callback: function (value, index, values) {
+                        return value / 1000000 + 'm kWh'
                     }
                 }
             },
@@ -80,14 +92,17 @@ function TestChart() {
                     lineWidth: 1
                 }
             }
-        }
+        },
+        responsive: true
     };
 
-    return(
+    return (
         <div>
-            <Line data={data} options={options} height={428} width={900}></Line>
+            {chartData.labels && chartData.datasets &&
+                <Line data={chartData} options={options} height={428} width={900}></Line>
+            }
         </div>
     )
 }
 
-export default TestChart
+export default ChartEnergyConsumptionPlantGermany
