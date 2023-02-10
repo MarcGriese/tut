@@ -7,6 +7,7 @@ import arrowRightIcon from '../../assets/arrow-right.svg'
 import Sidebar from '../../Sidebars/SidebarEnergyConsumption'
 import Chart from '../../Charts/Energy Consumption/ChartEnergyConsumptionPlantHungary.js'
 
+let thisMonth = "2.060.793 kWh"
 
 function EnergyConsumptionPlantHungary() {
 
@@ -24,7 +25,7 @@ function EnergyConsumptionPlantHungary() {
                                         <span className="aileron-regular-normal-white-16px">THIS MONTH'S ENERGY CONSUMPTION:</span>
                                     </div>
                                     <h1 className="value-consumption aileron-bold-green-haze-40px">
-                                        <span className="aileron-bold-green-haze-40px">value</span>
+                                        <span className="aileron-bold-green-haze-40px">{thisMonth}</span>
                                     </h1>
                                 </header>
                                 <div className="time">

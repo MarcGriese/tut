@@ -29,13 +29,13 @@ function EnergyCostsM486hourly() {
                                         </header>
                                         <div className="time">
                                             <div className="hourly aileron-bold-white-16px">
-                                                <span className="aileron-bold-white-16px">hourly</span>
+                                                <span className="aileron-bold-white-16px">day</span>
                                             </div>
                                             <div className="daily aileron-regular-normal-white-16px">
-                                                <span className="aileron-regular-normal-white-16px">daily</span>
+                                                <span className="aileron-regular-normal-white-16px">week</span>
                                             </div>
                                             <div className="weekly aileron-regular-normal-white-16px">
-                                                <span className="aileron-regular-normal-white-16px">weekly</span>
+                                                <span className="aileron-regular-normal-white-16px">month</span>
                                             </div>
                                         </div>
                                     </div>
