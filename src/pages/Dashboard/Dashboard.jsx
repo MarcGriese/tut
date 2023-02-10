@@ -6,6 +6,8 @@ import icon1 from '../../assets/energy-costs-icon-1.svg'
 import icon2 from '../../assets/carbon-footprint-icon-1.svg'
 import icon3 from '../../assets/energy-consumption-icon-1.svg'
 import icon4 from '../../assets/produced-icon.svg'
+import icon5 from '../../assets/errors.svg'
+import icon6 from '../../assets/time.svg'
 import arrowLeftIcon from '../../assets/arrow-left.svg'
 import arrowRightIcon from '../../assets/arrow-right.svg'
 import bubble from '../../assets/bubble.svg'
@@ -65,9 +67,9 @@ function Dashboard() {
                                     <div className="total">
                                         <div className="flex-row-1">
                                             <div className="header aileron-regular-normal-white-16px">
-                                                <span className="aileron-regular-normal-white-16px">tbd</span>
+                                                <span className="aileron-regular-normal-white-16px">TOTAL PRODUCTION ERRORS</span>
                                             </div>
-                                            <img className="icon" src={icon4} alt="icon" />
+                                            <img className="icon" src={icon5} alt="icon" />
                                         </div>
                                     </div>
                                 </Link>
@@ -130,9 +132,9 @@ function Dashboard() {
                                     <div className="total">
                                         <div className="flex-row-1">
                                             <div className="header aileron-regular-normal-white-16px">
-                                                <span className="aileron-regular-normal-white-16px">tbd</span>
+                                                <span className="aileron-regular-normal-white-16px">TOTAL PRODUCTION TIME</span>
                                             </div>
-                                            <img className="icon" src={icon4} alt="icon" />
+                                            <img className="icon" src={icon6} alt="icon" />
                                         </div>
                                     </div>
                                 </Link>

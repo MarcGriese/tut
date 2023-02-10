@@ -100,12 +100,7 @@
     width: 42px;
 }
 
-.settings-container {
-    height: 49px;
-    margin-left: 1.02px;
-    position: relative;
-    width: 37px;
-}
+
 
 .icon-settings {
     height: 30px;
@@ -124,6 +119,13 @@
     height: 55px;
     justify-content: center;
     min-width: 55px;
+}
+
+.settings-container {
+    height: 49px;
+    margin-left: 1.02px;
+    position: relative;
+    width: 37px;
 }
 
 .icon-settings-1 {
@@ -318,7 +320,8 @@
 .hourly {
     letter-spacing: 0;
     line-height: normal;
-    margin-top: 1px;
+    position: relative;
+    left: 22px;
     min-height: 19px;
     min-width: 50px;
 }
