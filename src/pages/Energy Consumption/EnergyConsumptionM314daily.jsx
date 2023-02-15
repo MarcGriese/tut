@@ -1,15 +1,15 @@
 import React from "react";
 import '../../css/global.css'
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
 import menuIconTopRight from '../../assets/menu-icon-top-right-1.svg'
 import iconSettings3 from '../../assets/schneider-electric-logo.svg'
 import arrowLeftIcon from '../../assets/arrow-left.svg'
 import arrowRightIcon from '../../assets/arrow-right.svg'
-import Sidebar from '../../Sidebars/SidebarEnergyCosts'
-import Chart from '../../Charts/Energy Costs/ChartEnergyCostsM314hourly.js'
+import Sidebar from '../../Sidebars/SidebarEnergyConsumption'
+import Chart from '../../Charts/Energy Consumption/ChartEnergyConsumptionM314daily.js'
 
 
-function EnergyCostsM486hourly() {
+function EnergyConsumptionM314daily() {
 
     return (
         <div className="container-center-horizontal">
@@ -22,25 +22,25 @@ function EnergyCostsM486hourly() {
                             <div className="flex-row-1">
                                 <header className="header">
                                     <div className="title-consumption aileron-regular-normal-white-16px">
-                                        <span className="aileron-regular-normal-white-16px">THIS HOUR'S ENERGY COSTS:</span>
+                                        <span className="aileron-regular-normal-white-16px">TODAY'S ENERGY CONSUMPTION:</span>
                                     </div>
                                     <h1 className="value-consumption aileron-bold-green-haze-40px">
                                         <span className="aileron-bold-green-haze-40px">value</span>
                                     </h1>
                                 </header>
                                 <div className="time">
-                                    <Link to='/energycosts/m486hourly'>
-                                        <div className="hourly aileron-bold-white-16px">
-                                            <span className="aileron-bold-white-16px">day</span>
+                                    <Link to='/energyconsumption/m314hourly'>
+                                        <div className="hourly-daily aileron-regular-normal-white-16px">
+                                            <span className="aileron-regular-normal-white-16px">day</span>
                                         </div>
                                     </Link>
-                                    <Link to='/energycosts/m486daily'>
-                                        <div className="daily aileron-regular-normal-white-16px">
-                                            <span className="aileron-regular-normal-white-16px">week</span>
+                                    <Link to='/energyconsumption/m314daily'>
+                                        <div className="daily-daily aileron-bold-white-16px">
+                                            <span className="aileron-bold-white-16px">week</span>
                                         </div>
                                     </Link>
-                                    <Link to='/energycosts/m486weekly'>
-                                        <div className="weekly aileron-regular-normal-white-16px">
+                                    <Link to='/energyconsumption/m314weekly'>
+                                        <div className="weekly-daily aileron-regular-normal-white-16px">
                                             <span className="aileron-regular-normal-white-16px">month</span>
                                         </div>
                                     </Link>
@@ -54,7 +54,7 @@ function EnergyCostsM486hourly() {
                     </div>
                     <img className="schneider-electric-logo" src={iconSettings3} alt="Schneider Electric Logo" />
                     <div className="page-title aileron-bold-white-25px">
-                        <span className="aileron-bold-white-25px">M486 ASSEMBLAGE</span>
+                        <span className="aileron-bold-white-25px">M314 SPRITZMASCHINE</span>
                     </div>
                     <DaySelection />
                 </div>
@@ -75,4 +75,4 @@ function DaySelection() {
     );
 }
 
-export default EnergyCostsM486hourly;
+export default EnergyConsumptionM314daily;

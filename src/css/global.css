@@ -322,6 +322,7 @@
     line-height: normal;
     position: relative;
     left: 22px;
+    top: 1px;
     min-height: 19px;
     min-width: 50px;
 }
@@ -338,6 +339,56 @@
     letter-spacing: 0;
     line-height: normal;
     margin-top: -1px;
+    min-height: 19px;
+}
+
+.hourly-daily {
+    letter-spacing: 0;
+    line-height: normal;
+    position: relative;
+    left: 22px;
+    top: -1px;
+    min-height: 19px;
+    min-width: 50px;
+}
+
+.daily-daily {
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: 0px;
+    min-height: 19px;
+    min-width: 35px;
+}
+
+.weekly-daily {
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1px;
+    min-height: 19px;
+}
+
+.hourly-weekly {
+    letter-spacing: 0;
+    line-height: normal;
+    position: relative;
+    left: 22px;
+    top: -1px;
+    min-height: 19px;
+    min-width: 50px;
+}
+
+.daily-weekly {
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1px;
+    min-height: 19px;
+    min-width: 35px;
+}
+
+.weekly-weekly {
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: 0px;
     min-height: 19px;
 }
 

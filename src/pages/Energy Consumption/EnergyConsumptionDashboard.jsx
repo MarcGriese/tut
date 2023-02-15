@@ -59,7 +59,7 @@ function EnergyCostsDashboard() {
                                 </Link>
                             </div>
                             <div className="flex-row-2">
-                                <Link to='/energyconsumption/m314'>
+                                <Link to='/energyconsumption/m314hourly'>
                                     <div className="flex-row-item">
                                         <div className="m314-spritzmaschine aileron-regular-normal-white-16px">
                                             <span className="aileron-regular-normal-white-16px">M314 SPRITZMASCHINE</span>
@@ -69,7 +69,7 @@ function EnergyCostsDashboard() {
                                         </div>
                                     </div>
                                 </Link>
-                                <Link to='/energyconsumption/m486'>
+                                <Link to='/energyconsumption/m486hourly'>
                                     <div className="flex-row-item">
                                         <div className="m486-assemblage aileron-regular-normal-white-16px">
                                             <span className="aileron-regular-normal-white-16px">M486 ASSEMBLAGE</span>
