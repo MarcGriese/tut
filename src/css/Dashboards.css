@@ -285,7 +285,9 @@
 .date {
     letter-spacing: 0;
     line-height: normal;
-    margin-bottom: 1px;
+    position: relative;
+    left: 28px;
+    top: 6px;
     min-height: 19px;
     min-width: 160px;
 }

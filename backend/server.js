@@ -6,6 +6,7 @@ var config = {
     connectionString: 'Driver=SQL Server; Server=WTDELVSE197671L\\SQLEXPRESS;database: energyMonitoring; trustedConnection: true;'
 };
 const cors = require('cors')
+api.use(express.urlencoded({ extended: true }));
 api.use( express.json())
 api.use(cors())
 
@@ -20,6 +21,18 @@ let arrCarbonFootprintGermany = []
 let co2MultiplierHungary = 0.26
 let arrCarbonFootprintHungary = []
 let arrCarbonFootprintGeneral = []
+
+//gottloser test
+
+api.post('/api/date', (req, res) => {
+    const { date } = req.body;
+    console.log(`Received date: ${date}`);
+    // Do something with the received date
+  
+    res.status(200).send(`Date received: ${date} `);
+  });
+
+
 
 //
 // ----------------------------------------

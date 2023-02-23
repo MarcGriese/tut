@@ -2,10 +2,9 @@ import React from "react";
 import '../../css/global.css'
 import menuIconTopRight from '../../assets/menu-icon-top-right-1.svg'
 import iconSettings3 from '../../assets/schneider-electric-logo.svg'
-import arrowLeftIcon from '../../assets/arrow-left.svg'
-import arrowRightIcon from '../../assets/arrow-right.svg'
 import Sidebar from '../../Sidebars/SidebarEnergyConsumption'
 import Chart from '../../Charts/Energy Consumption/ChartEnergyConsumptionPlantGermany.js'
+import DatePicker from '../../DatePicker'
 
 let thisMonth = "1.895.368 kWh"
 
@@ -52,13 +51,11 @@ function EnergyConsumptionPlantGermany() {
 }
 
 function DaySelection() {
-    return(
+    return (
         <div className="day-selection">
-            <img className="arrow" src={arrowLeftIcon} alt="arrow left" />
-            <div className="date aileron-regular-normal-white-16px">
-                <span className="aileron-regular-normal-white-16px">Day | Mon, 02.01.2023</span>
+            <div className="date">
+                <DatePicker />
             </div>
-            <img className="arrow" src={arrowRightIcon} alt="arrow right" />
         </div>
     );
 }
