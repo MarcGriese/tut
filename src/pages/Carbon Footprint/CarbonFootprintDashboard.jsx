@@ -3,8 +3,7 @@ import Sidebar from '../../Sidebars/SidebarCarbonFootprint'
 import menuIconTopRight from '../../assets/menu-icon-top-right-1.svg'
 import schneiderElectricLogo from '../../assets/schneider-electric-logo.svg'
 import icon from '../../assets/carbon-footprint-icon-1.svg'
-import arrowLeftIcon from '../../assets/arrow-left.svg'
-import arrowRightIcon from '../../assets/arrow-right.svg'
+import DatePicker from '../../DatePicker'
 import bubble from '../../assets/bubble.svg'
 import '../../css/Dashboards.css'
 import { Link } from 'react-router-dom'
@@ -112,11 +111,9 @@ function Bubble() {
 function DaySelection() {
     return (
         <div className="day-selection">
-            <img className="arrow" src={arrowLeftIcon} alt="arrow left" />
-            <div className="date aileron-regular-normal-white-16px">
-                <span className="aileron-regular-normal-white-16px">Day | Mon, 02.01.2023</span>
+            <div className="date">
+                <DatePicker />
             </div>
-            <img className="arrow" src={arrowRightIcon} alt="arrow right" />
         </div>
     );
 }

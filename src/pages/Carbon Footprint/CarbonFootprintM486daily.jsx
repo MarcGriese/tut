@@ -3,8 +3,7 @@ import '../../css/global.css'
 import { Link } from "react-router-dom";
 import menuIconTopRight from '../../assets/menu-icon-top-right-1.svg'
 import iconSettings3 from '../../assets/schneider-electric-logo.svg'
-import arrowLeftIcon from '../../assets/arrow-left.svg'
-import arrowRightIcon from '../../assets/arrow-right.svg'
+import DatePicker from '../../DatePicker'
 import Sidebar from '../../Sidebars/SidebarCarbonFootprint'
 import Chart from '../../Charts/Carbon Footprint/ChartCarbonFootprintM314hourly.js'
 
@@ -66,11 +65,9 @@ function CarbonFootprintM486daily() {
 function DaySelection() {
     return (
         <div className="day-selection">
-            <img className="arrow" src={arrowLeftIcon} alt="arrow left" />
-            <div className="date aileron-regular-normal-white-16px">
-                <span className="aileron-regular-normal-white-16px">Day | Mon, 02.01.2023</span>
+            <div className="date">
+                <DatePicker />
             </div>
-            <img className="arrow" src={arrowRightIcon} alt="arrow right" />
         </div>
     );
 }

@@ -8,8 +8,7 @@ import icon3 from '../../assets/energy-consumption-icon-1.svg'
 import icon4 from '../../assets/produced-icon.svg'
 import icon5 from '../../assets/errors.svg'
 import icon6 from '../../assets/time.svg'
-import arrowLeftIcon from '../../assets/arrow-left.svg'
-import arrowRightIcon from '../../assets/arrow-right.svg'
+import DatePicker from '../../DatePicker'
 import bubble from '../../assets/bubble.svg'
 import '../../css/Dashboards.css'
 import { Link } from 'react-router-dom'
@@ -180,11 +179,9 @@ function Bubble2() {
 function DaySelection() {
     return (
         <div className="day-selection">
-            <img className="arrow" src={arrowLeftIcon} alt="arrow left" />
-            <div className="date aileron-regular-normal-white-16px">
-                <span className="aileron-regular-normal-white-16px">Day | Mon, 02.01.2023</span>
+            <div className="date">
+                <DatePicker />
             </div>
-            <img className="arrow" src={arrowRightIcon} alt="arrow right" />
         </div>
     );
 }
